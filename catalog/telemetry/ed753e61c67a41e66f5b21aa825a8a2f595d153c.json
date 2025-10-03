@@ -1,0 +1,118 @@
+{
+  "id": "ed753e61c67a41e66f5b21aa825a8a2f595d153c",
+  "path": "field_recordings/20251002/FlightRecord_2025-10-02_[14-06-49].csv",
+  "drone_id": null,
+  "start_utc": "2025-10-02T04:06:49.066000+00:00",
+  "end_utc": "2025-10-02T04:16:48.266012+00:00",
+  "row_count": 5993,
+  "bbox": {
+    "lat_min": -26.69835709901271,
+    "lat_max": 0.005617510065124267,
+    "lon_min": -0.1007099141931655,
+    "lon_max": 152.88618084145008
+  },
+  "size_bytes": 852886,
+  "sha1": "ed753e61c67a41e66f5b21aa825a8a2f595d153c",
+  "date_key": "20251002",
+  "overlaps": [
+    {
+      "recording_id": "fbfb1d5872a7aa0593e7a3193350e23558dd7328",
+      "recording_path": "field_recordings/20251002/251002-T001.WAV",
+      "recording_file": "251002-T001.WAV",
+      "overlap_start_utc": "2025-10-02T04:08:28+00:00",
+      "overlap_end_utc": "2025-10-02T04:08:44.016000+00:00",
+      "overlap_s": 16.016,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "233a8112add716e31117eef55102f865c4dfad52",
+      "recording_path": "field_recordings/20251002/251002-T002.WAV",
+      "recording_file": "251002-T002.WAV",
+      "overlap_start_utc": "2025-10-02T04:09:02+00:00",
+      "overlap_end_utc": "2025-10-02T04:09:21.019000+00:00",
+      "overlap_s": 19.019,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "943f67aa1437127a29a7ca576e036a0860c3a49e",
+      "recording_path": "field_recordings/20251002/251002-T003.WAV",
+      "recording_file": "251002-T003.WAV",
+      "overlap_start_utc": "2025-10-02T04:09:45+00:00",
+      "overlap_end_utc": "2025-10-02T04:10:38.987292+00:00",
+      "overlap_s": 53.987,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "2be6c691c37436f1cf79ad62689d56883e04fe1e",
+      "recording_path": "field_recordings/20251002/251002-T004.WAV",
+      "recording_file": "251002-T004.WAV",
+      "overlap_start_utc": "2025-10-02T04:10:40+00:00",
+      "overlap_end_utc": "2025-10-02T04:11:03.957250+00:00",
+      "overlap_s": 23.957,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "01685bd6b69501d6399a8a9c896531f073fa989b",
+      "recording_path": "field_recordings/20251002/251002-T005.WAV",
+      "recording_file": "251002-T005.WAV",
+      "overlap_start_utc": "2025-10-02T04:11:25+00:00",
+      "overlap_end_utc": "2025-10-02T04:11:58.967292+00:00",
+      "overlap_s": 33.967,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "7815719beb9fe9d18ea264e83e061e34576ccdc7",
+      "recording_path": "field_recordings/20251002/251002-T006.WAV",
+      "recording_file": "251002-T006.WAV",
+      "overlap_start_utc": "2025-10-02T04:12:21+00:00",
+      "overlap_end_utc": "2025-10-02T04:13:04.977292+00:00",
+      "overlap_s": 43.977,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "49845d9bc47a2c49acf294b1ac7c19c3b3dde044",
+      "recording_path": "field_recordings/20251002/251002-T007.WAV",
+      "recording_file": "251002-T007.WAV",
+      "overlap_start_utc": "2025-10-02T04:13:09+00:00",
+      "overlap_end_utc": "2025-10-02T04:13:31.022000+00:00",
+      "overlap_s": 22.022,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "8ffcadacc543e33a8f24912308fe142b0b95aa23",
+      "recording_path": "field_recordings/20251002/251002-T008.WAV",
+      "recording_file": "251002-T008.WAV",
+      "overlap_start_utc": "2025-10-02T04:13:53+00:00",
+      "overlap_end_utc": "2025-10-02T04:14:38.045000+00:00",
+      "overlap_s": 45.045,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "e8c3bb1b446bce3bce480fe1479288a629df528e",
+      "recording_path": "field_recordings/20251002/251002-T009.WAV",
+      "recording_file": "251002-T009.WAV",
+      "overlap_start_utc": "2025-10-02T04:14:40+00:00",
+      "overlap_end_utc": "2025-10-02T04:15:13.033000+00:00",
+      "overlap_s": 33.033,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "9d7904d4b594e49d928e545fe9c556d98e1fa9af",
+      "recording_path": "field_recordings/20251002/251002-T010.WAV",
+      "recording_file": "251002-T010.WAV",
+      "overlap_start_utc": "2025-10-02T04:15:27+00:00",
+      "overlap_end_utc": "2025-10-02T04:15:40.013000+00:00",
+      "overlap_s": 13.013,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "b0d401006988259cc2070687d4310c9c504764a6",
+      "recording_path": "field_recordings/20251002/251002-T011.WAV",
+      "recording_file": "251002-T011.WAV",
+      "overlap_start_utc": "2025-10-02T04:15:41+00:00",
+      "overlap_end_utc": "2025-10-02T04:16:48.266012+00:00",
+      "overlap_s": 67.266,
+      "audio_fraction": 0.922
+    }
+  ]
+}

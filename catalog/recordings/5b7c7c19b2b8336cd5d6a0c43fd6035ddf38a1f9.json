@@ -1,0 +1,39 @@
+{
+  "id": "5b7c7c19b2b8336cd5d6a0c43fd6035ddf38a1f9",
+  "path": "field_recordings/20250918/250918-T014.WAV",
+  "start_utc": "2025-09-18T06:48:56+00:00",
+  "end_utc": "2025-09-18T06:59:02.005417+00:00",
+  "duration_s": 606.005,
+  "sample_rate_hz": 48000,
+  "channels": 6,
+  "array": {
+    "lat": -26.696758333,
+    "lon": 152.885445,
+    "alt_m": 0.0,
+    "heading_deg": 136.0,
+    "ref": "hex6_ring",
+    "channel_map": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "device": null,
+  "size_bytes": 698249312,
+  "sha1": "5b7c7c19b2b8336cd5d6a0c43fd6035ddf38a1f9",
+  "date_key": "20250918",
+  "overlaps": [
+    {
+      "telemetry_id": "2e6213d84c32ba4bd2e4cc00295bb125d5ad3ab7",
+      "telemetry_path": "field_recordings/20250918/FlightRecord_2025-09-18_[16-48-41].csv",
+      "telemetry_file": "FlightRecord_2025-09-18_[16-48-41].csv",
+      "overlap_start_utc": "2025-09-18T06:48:56+00:00",
+      "overlap_end_utc": "2025-09-18T06:58:58.098037+00:00",
+      "overlap_s": 602.098,
+      "telemetry_fraction": 0.976
+    }
+  ]
+}

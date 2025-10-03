@@ -1,0 +1,55 @@
+{
+  "id": "a58962fb7186531591ca3737afe6eedbc9a242c4",
+  "path": "field_recordings/20250905/FlightRecord_2025-09-05_[11-28-14].csv",
+  "drone_id": null,
+  "start_utc": "2025-09-05T01:28:14.302000+00:00",
+  "end_utc": "2025-09-05T01:35:22.902006+00:00",
+  "row_count": 4288,
+  "bbox": {
+    "lat_min": -26.696951448294755,
+    "lat_max": 0.006701945563893854,
+    "lon_min": -0.37325751494731796,
+    "lon_max": 152.88561747461134
+  },
+  "size_bytes": 601832,
+  "sha1": "a58962fb7186531591ca3737afe6eedbc9a242c4",
+  "date_key": "20250905",
+  "overlaps": [
+    {
+      "recording_id": "6919e226147ca55cca6d9692ae52104e9669071a",
+      "recording_path": "field_recordings/20250905/250905-T011.WAV",
+      "recording_file": "250905-T011.WAV",
+      "overlap_start_utc": "2025-09-05T01:28:56+00:00",
+      "overlap_end_utc": "2025-09-05T01:29:09.947250+00:00",
+      "overlap_s": 13.947,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "ad2b955fbb2ad1db81ec22d9e77cb104e3990301",
+      "recording_path": "field_recordings/20250905/250905-T012.WAV",
+      "recording_file": "250905-T012.WAV",
+      "overlap_start_utc": "2025-09-05T01:30:01+00:00",
+      "overlap_end_utc": "2025-09-05T01:30:14.947292+00:00",
+      "overlap_s": 13.947,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "f8c9c44e835f76f84b3692390c05d71f1fbf6006",
+      "recording_path": "field_recordings/20250905/250905-T013.WAV",
+      "recording_file": "250905-T013.WAV",
+      "overlap_start_utc": "2025-09-05T01:31:01+00:00",
+      "overlap_end_utc": "2025-09-05T01:32:08.934542+00:00",
+      "overlap_s": 67.935,
+      "audio_fraction": 1.0
+    },
+    {
+      "recording_id": "b5badff782a2ab66dae5919e08057e00623f8a72",
+      "recording_path": "field_recordings/20250905/250905-T014.WAV",
+      "recording_file": "250905-T014.WAV",
+      "overlap_start_utc": "2025-09-05T01:32:30+00:00",
+      "overlap_end_utc": "2025-09-05T01:33:56.019292+00:00",
+      "overlap_s": 86.019,
+      "audio_fraction": 1.0
+    }
+  ]
+}

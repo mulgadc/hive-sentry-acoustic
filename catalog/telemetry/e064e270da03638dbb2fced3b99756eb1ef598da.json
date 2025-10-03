@@ -1,0 +1,18 @@
+{
+  "id": "e064e270da03638dbb2fced3b99756eb1ef598da",
+  "path": "field_recordings/20251001/FlightRecord_2025-10-01_[14-19-46].csv",
+  "drone_id": null,
+  "start_utc": "2025-10-01T04:19:46.531000+00:00",
+  "end_utc": "2025-10-01T04:19:48.331000+00:00",
+  "row_count": 19,
+  "bbox": {
+    "lat_min": -26.696737191659885,
+    "lat_max": -26.696736799025803,
+    "lon_min": 152.88546979477627,
+    "lon_max": 152.88547029699032
+  },
+  "size_bytes": 2992,
+  "sha1": "e064e270da03638dbb2fced3b99756eb1ef598da",
+  "date_key": "20251001",
+  "overlaps": []
+}

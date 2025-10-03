@@ -1,0 +1,21 @@
+# Ignore large datasets and caches from build context
+field_recordings/
+**/*.WAV
+**/*.wav
+**/*.csv
+**/*.geojson
+
+# Git and IDE
+.git/
+.gitignore
+*.pyc
+__pycache__/
+*.ipynb_checkpoints/
+
+# Node modules (present but not needed)
+node_modules/
+
+# Python envs
+.env
+.venv
+*/.venv

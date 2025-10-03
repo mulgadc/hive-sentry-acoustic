@@ -1,0 +1,68 @@
+services:
+  rtp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Match your JetPack/L4T version (e.g., r36.2.0-py3). Override via env or build-arg
+        L4T_TAG: ${L4T_TAG:-r36.2.0-py3}
+        # Toggle micromamba usage (1=on, 0=off)
+        USE_MAMBA: ${USE_MAMBA:-0}
+    image: mulga/rtp:jetson-${L4T_TAG:-r36.2.0-py3}
+    container_name: rtp
+    runtime: nvidia
+    network_mode: host
+    ipc: host
+    restart: unless-stopped
+    # GPU access on Jetson - use runtime nvidia without deploy section
+    # deploy section conflicts with runtime: nvidia on Jetson systems
+    environment:
+      - DISPLAY
+      - MODELS_ROOT=/models
+      # Enable GPU backend in application runtime
+      - USE_CUDA=1
+      # NVIDIA container runtime environment (generally safe on Jetson; runtime: nvidia already set)
+      - NVIDIA_VISIBLE_DEVICES=all
+      # Include graphics/display caps so X11 GUIs work (Matplotlib TkAgg etc.)
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics,display
+      # X11: avoid MIT-SHM issues inside container
+      - QT_X11_NO_MITSHM=1
+      # Prefer TkAgg GUI backend for the viewer when DISPLAY is set
+      - MPLBACKEND=TkAgg
+      - AUDIO_LATENCY_MS=8
+      - OMP_NUM_THREADS=6
+      - OPENBLAS_NUM_THREADS=6
+      - MKL_NUM_THREADS=2
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./field_recordings:/app/field_recordings:ro
+      - ./catalog:/app/catalog:ro
+      - ./src:/app/src:ro
+      - ./rt_main.py:/app/rt_main.py:ro
+      - ./srp_gcc_viewer.py:/app/srp_gcc_viewer.py:ro
+      - ./webhook_emitter.py:/app/webhook_emitter.py:ro
+      - ./config.py:/app/config.py:ro
+      - ./requirements.txt:/app/requirements.txt:ro
+      - ${MODELS_DIR:-./src/droneprint/models}:/models:ro
+      # Optional ALSA config (uncomment if you have a customized asoundrc)
+      # - ${HOME}/.asoundrc:/root/.asoundrc:ro
+    devices:
+      - /dev/snd
+      # Optional: expose DRM device for X/GL if present on host
+      - /dev/dri
+      # Add USB if your audio interface is USB-based
+      # - /dev/bus/usb:/dev/bus/usb
+      # Optional: GPIO interfaces for microphone arrays using GPIO
+      # - /dev/gpiochip0:/dev/gpiochip0
+      # - /dev/gpiochip1:/dev/gpiochip1
+    group_add:
+      - audio
+      # - gpio  # if present on your system
+    ulimits:
+      rtprio: 99
+      memlock: -1
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_NICE
+    command: ["/bin/bash", "-lc", "echo 'Container ready' && sleep infinity"]

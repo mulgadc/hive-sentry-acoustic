@@ -1,0 +1,13 @@
+}chris@chris-mulga:~/projects/srp-phat-workbench$ docker compose -f docker-compose.jetson.yml config | sed n '1,120p'
+sed: can't read 1,120p: No such file or directory
+WARN[0000] /home/chris/projects/srp-phat-workbench/docker-compose.jetson.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+chris@chris-mulga:~/projects/srp-phat-workbench$ ./scripts/run_jetson.sh up
+Starting container...
+WARN[0000] /home/chris/projects/srp-phat-workbench/docker-compose.jetson.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 0/1
+ ⠹ Container rtp  Starting                                                                                                            0.3s 
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error running prestart hook #0: exit status 1, stdout: , stderr: Auto-detected mode as 'csv'
+invoking the NVIDIA Container Runtime Hook directly (e.g. specifying the docker --gpus flag) is not supported. Please use the NVIDIA Container Runtime (e.g. specify the --runtime=nvidia flag) instead.: unknown
+chris@chris-mulga:~/projects/srp-phat-workbench$ ./scripts/run_jetson.sh up^C
+chris@chris-mulga:~/projects/srp-phat-workbench$ 
+

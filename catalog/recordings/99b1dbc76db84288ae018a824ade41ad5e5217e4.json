@@ -1,0 +1,29 @@
+{
+  "id": "99b1dbc76db84288ae018a824ade41ad5e5217e4",
+  "path": "field_recordings/20250910/250910-T005.WAV",
+  "start_utc": "2025-09-10T02:35:06+00:00",
+  "end_utc": "2025-09-10T02:47:32.078667+00:00",
+  "duration_s": 746.079,
+  "sample_rate_hz": 48000,
+  "channels": 6,
+  "array": {
+    "lat": -26.696758333,
+    "lon": 152.885445,
+    "alt_m": 0.0,
+    "heading_deg": 130.0,
+    "ref": "cross6_spike2",
+    "channel_map": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "device": null,
+  "size_bytes": 859613696,
+  "sha1": "99b1dbc76db84288ae018a824ade41ad5e5217e4",
+  "date_key": "20250910",
+  "overlaps": []
+}

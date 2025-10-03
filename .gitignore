@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+srp-phat-env/
+
+# IDE and local settings
+.claude/
+.windsurfrules
+
+# Backup files
+*.backup
+*.backup_copy-*
+*bkp*
+minimal_srp_backup*.py
+
+# Data and media files
+*.png
+
+# Archive for old code
+.archive/

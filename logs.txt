@@ -1,0 +1,77 @@
+8 15.36 + exit 126
+#8 ERROR: process "/bin/sh -c set -eux;     echo \"USE_MAMBA=${USE_MAMBA}\";     if [ \"${USE_MAMBA}\" = \"1\" ]; then       echo \"MAMBA_ROOT_PREFIX=${MAMBA_ROOT_PREFIX}\";       curl --fail --location --show-error --retry 3 -o /usr/local/bin/micromamba         https://micro.mamba.pm/api/micromamba/linux-aarch64/latest;       chmod +x /usr/local/bin/micromamba;       file /usr/local/bin/micromamba | tee /tmp/mamba_file.txt;       if ! grep -qiE 'ELF.*aarch64|ELF.*ARM aarch64' /tmp/mamba_file.txt; then         echo 'ERROR: Downloaded micromamba is not an aarch64 ELF binary. Aborting.' >&2;         head -n 20 /usr/local/bin/micromamba || true;         exit 126;       fi;       /usr/local/bin/micromamba --version;       micromamba shell init -s bash -p ${MAMBA_ROOT_PREFIX};     else       echo \"Skipping micromamba installation (USE_MAMBA=0).\";     fi" did not complete successfully: exit code: 126
+------
+ > [3/8] RUN set -eux;     echo "USE_MAMBA=1";     if [ "1" = "1" ]; then       echo "MAMBA_ROOT_PREFIX=/opt/conda";       curl --fail --location --show-error --retry 3 -o /usr/local/bin/micromamba         https://micro.mamba.pm/api/micromamba/linux-aarch64/latest;       chmod +x /usr/local/bin/micromamba;       file /usr/local/bin/micromamba | tee /tmp/mamba_file.txt;       if ! grep -qiE 'ELF.*aarch64|ELF.*ARM aarch64' /tmp/mamba_file.txt; then         echo 'ERROR: Downloaded micromamba is not an aarch64 ELF binary. Aborting.' >&2;         head -n 20 /usr/local/bin/micromamba || true;         exit 126;       fi;       /usr/local/bin/micromamba --version;       micromamba shell init -s bash -p /opt/conda;     else       echo "Skipping micromamba installation (USE_MAMBA=0).";     fi:
+��(Pz$�)�tHP��p�:
+15.36 ���m�z(
+Tȁ�����L�i0��a44�a� `L�`M&d�=�B)�2412i�&@� �    �&h#	�M'�MO&�����i��S���L�4��4`&�4
+�
+��v����������Lؒ(�x�!����^��[o���9�]*NEM��?ѧF�Tig����Χ켚��_����_�m��ґ$�}$�R�*I,���4�)��O���SMh
+                                                  ������]V���T�K�n�L�33UT3$�OJI�M���f���$n�N��m��S�9�7��my���7IT�$�O�(��"������+\�^�;�D.2O���#���t�o$y��E\iJԣ�]Ҳ�4�׌�j�GuJ��5#/g�y[���S������5Jl}�F���{�����lx��ڛ�l~��_���"l�����z�����
+15.36 WK�<:���~���I��M�ۋIQ����K���<�4Mrpt�Y$�E�g�=?�h���V��W�������f(۟�*��I�������|���\�vQ3�+�������\?���~�/����������?
+                                                                                                                      �b��ͮ���gG��"���F��$�Oͯib��©�I����'�M��$�E/���{�=үj�9S/*YV��8R�*�V�W�]�ŮR�*��δIj>v�$I�aq;m��I$����<�e*�Q��M�����]���m�6����wM����<�Q)3�I�h�"a�G�>9ɞF��B4����4Q$�E�'�F�E�N!El����tO��2�"�T�t�Cқ�u+��e�ˮ�E�_u����a���)�I��v������}��7����YH��G��׉ȉK�7;E�T����o����h��\	�g�Ӟ&^w3�?�S"W��r/�mie��$�iU-yO��$H�]��s�Av��g�Y�/�n�;��I�f�3)D�$�
+                                ��U���o�]�OAmM���%I7M|�E����J��o�|��;�,�]UUM?��K�2I�UUU�V�I$�f!mףU�UP؄sM�I�#n�����o���9d��旤�u�zHݶ�q�[|��������/91uh���)��ۉr����s�H�\���<��r�N�m�j.�\��j��:n���J6d���d���t�z!)y>e4��l�Ȕ��OԳ���^V�c߷��u�u�4�����=p��wĒ��FOynH��W%�c��g����>�zK��}�ߘbޖ��m��}T���.$��u��D�����{˽ވ��B��[h���'���w~:��r��4#����,������H�L�D�{����)�x<f����k���>��-���I{�$��ʹ���6Ҥ-$�H���?UU�TyT����?���ߜ�~��%��$��qt4I��}�ܑZ���2"Ii6P��IT�Зi�ݥ�[��rD�
+                             �F�X ��9<�^_�,D��϶��-�t��M�KS硢ME̒iM�㐪��g�`H�Zm�%�C����&�p����S��eo��E
+�է��NEG�$zk�k����u����}W�I���O�lغ=h�G���T�x7t���Tɉr83��ٻ����+r$���g�������'��k���|9_�Z�K��79���D��>yNު����Lת߂����k��K��_�����ҜI$�)#����$��fVM���]�sj$�U�a'h�M�u������o��m�+�wy����ےf���ꪳUUQ���UUT$�e��wrI7�J�tݶ���1��[G�Q��7�M���a����7Vez�*!�K���Y�?_wR�t[d6�q����i4�%��Q�46-�!n�Ӫ��n{\_����S3��V�Ǻ�ܨ�-|��RAn�S�*� �'�:�!���+��3m�򠍺O�ߋt�w^E���))��n_
+                                                             ��6��seYYk�S�|=�K���\��ş	g���1�韇�]��*ن��]t����SX~��.���p~JH��w���}/��=��F��M��h�s����<J��O�+������aۛ�cKt�=���I:�`���$5�&�m��Q���O�xO�*�V�$I14�'�Ii$�9I&�I�I��Uv�\�I��ZI&��HĒn>vJ?����������Ksm��*�A��lݲ�H��I��^�o9_�K̹$�R��
+   }	L��{7IOEZM��=	\�1�f�EJ�.�r�cI%��I$�6���>V���{̐9=ԲZ�@GqI+D�|O-W����6���z¼)�S=��犸}����N���6|�?E��]��;q.c��>9�&՞�����u�5����Hq����S�(��cш�zF�Ex��KM.�r�=��Yɟ�7�\?s+*�n�~c�=͒�}���R�kfO�ʹ��|�^�%m��s�{�o&���֐_�|ׂ�_�٩�o�K��s#������zK���L""�9	���=�J��c{|���ۍ�M��O}���\�Ŕ�iگ}�گ��q7��qI�T��S~�Q�U$�9���U^��6�I]� �#m$��QӤ����.�e�޶��s�*��N6[N$�iD���?]ӿ�d��?b�����t�%��%�i~qs��G�ٟ��-��P؟�bBqL��ѓ��M�=��++���$�o�tO}�w�{�OM��G�^cL�
+      �h�<��+����ݚI�d*z�G��A����Y[�I4�����̟u�T���2҉j9�m����ۘ��>�Ͽ�q%�{�[���ۥ���㮑t��%��5���!�����uU�BQ�	{�{�{����������~�{���� I��������x�g�����{���Y�3�ƋX���2����R_E�Ii%Щ�m%	wzm��U�4��W�\Y���)}ݨ�R<��'���բZ$d��M"Id��=	�I��D��m�D�3Py�D`�$��[oē��Es&ۣ�&�(�!� �c�F�9XD��%{=~f�\��t��ۙ+�zhr�t��.!'��O�0��ܡ6�.XMO���Wlſ�>(��Q풢o�=��L~��m����=C���I����\�I-�g���4ߔ�Y����Ye��x�
+15.36 ڒ��;:����~ǥI[~R��'Я'���_�;��M���}ڝ��݊�|}sdݮ�o�K�HU/���]"z-RM�к$�Y5��$��I'�_�m*����Z=�4��'�i�����.s����m{�O���K\��D��E�jH�oY��ҏm�����s{�^�Ue%���t���y����Y-o䔑)!<��I�C����3���g���h�zn�IR�Ȗ�)�����C��s�j�\o��MVsE���v�&<�T��	�%ܕ$�
+                                                                                             ��l��M��)�>��h������>���W|O+G+�Y>Z"P���WE�Y�z}��ùx	m[���u>�r�!w)�[q�=&Gs��4{��x��w�|)~�}B8'u�5��;�+�*^*�t��I��G��>���I
+                                                                           �KIs������V9��h�>�:�}�z�D�H讏S�ŵ�;�=?�'G�Y�_��,��O�w#�	0��Ri$�����xͼ��}ķ���"Kʫ���֪To\���&�7���˙tC�%
+15.36 $��D�J\톢��?Uq�m��#m�6h�tҍ�Q�+SŶ��|�m��r�'M�$���%��	IRK�+�7J��?&7B�in{�2U�t�W�l�ZK�~�m�~�h�Oi�U�*�K�I&�>PɢM�Q>:�y1����}�"���]N���1�4��n��sf�������P�n�o�m�#���U�?R���j��J�~Or����{�ؗ>'��n잼��m��k��Y/.��=ϼ�k�uw79��~�S�=�$N�}d���<���7���]����-�QZEӁ�ޥ�%[uRJ�eQ�ڕ
+15.36 p�l��w9�(⺧݂I��I>����m"���j��UUSm�I3uU�5UPI$�J?O9�]T�%M��Si9�����ټ��5j.eIM��J$҉8�R.�E�o�R��D	;���)Ƒ��x�o���]��V��h��:T��SM��t�ad�(/O��"�l�%W���RJ}�Y��(.�d�K���p.��r;�s���x=ݳ���rf8D^䤝�O��`b2N;�+�d�����l�>&z;��k$���=)�?KsVG�,��/HQw��=���T� OUSI#Љc��K$��y�?i!򯙘��773��l��<��ƾ_�B��G��ENS���>��竒2M-5IR]�n�wrD��J�2^^�KI$Id��� ���	eKF'72��^}��	�$I-$�H��|Ͷ�������Ѥ�D�
+                                                                                                      �����0z�$���O�a��ls��i4NI�	$���K%�RG�g/9�J�Vs�k���n�ˤ�N��"E�Tm�|��g�t|T�6O;�e�����8�{�뻻/�*��-�I|K��R�q���M����H�\Əu���ws�В���>v���Y'���X��+��?0��U�`��$�U$�u���y���?�k�H�r���8�F��T������-�۪�J��m��9w�̛Uֶ�f6������̍�#~��j�̗B6�vշ2_�7r�wo�m�)F�+�{UI4�"�q�I%�]Ƌ�*��W��G^��z��R�(��Ǜ�=#Hܐ)is�RN�*�|��$�e��		$�z\��\���U%v�W~���W��+����.���k�-�ھh�UL�l�y�����e�L�۶����N�d���+Ԧ�#�}E
+                                                                    T�[}-�_c���_�÷f�l9���G�]�Q.�d��"����B����������VI�H��rW��}.����,���I"9<�#(I$<q���R9K).^^^Y�x� ��>q��)�����h�k��È��!�ͧ�$�b���鶖��Ͷ�����ګ��ʨ�iU���R�)&_,m%e	ʄ�ZK��H�b��m�D��m��,��ƓI����4[(��I��HOW1g��-um�	=��MBHe$�I"Z�O/�I�"N:H�=����A σ���[�f��s�I_^%��m��p�?����mƮ����
+15.36 + exit 126
+------
+Dockerfile:34
+
+--------------------
+
+  33 |     
+
+  34 | >>> RUN set -eux; \
+
+  35 | >>>     echo "USE_MAMBA=${USE_MAMBA}"; \
+
+  36 | >>>     if [ "${USE_MAMBA}" = "1" ]; then \
+
+  37 | >>>       echo "MAMBA_ROOT_PREFIX=${MAMBA_ROOT_PREFIX}"; \
+
+  38 | >>>       # micromamba installer for aarch64 with validation to prevent exec format errors
+
+  39 | >>>       curl --fail --location --show-error --retry 3 -o /usr/local/bin/micromamba \
+
+  40 | >>>         https://micro.mamba.pm/api/micromamba/linux-aarch64/latest; \
+
+  41 | >>>       chmod +x /usr/local/bin/micromamba; \
+
+  42 | >>>       file /usr/local/bin/micromamba | tee /tmp/mamba_file.txt; \
+
+  43 | >>>       if ! grep -qiE 'ELF.*aarch64|ELF.*ARM aarch64' /tmp/mamba_file.txt; then \
+
+  44 | >>>         echo 'ERROR: Downloaded micromamba is not an aarch64 ELF binary. Aborting.' >&2; \
+
+  45 | >>>         head -n 20 /usr/local/bin/micromamba || true; \
+
+  46 | >>>         exit 126; \
+
+  47 | >>>       fi; \
+
+  48 | >>>       /usr/local/bin/micromamba --version; \
+
+  49 | >>>       micromamba shell init -s bash -p ${MAMBA_ROOT_PREFIX}; \
+
+  50 | >>>     else \
+
+  51 | >>>       echo "Skipping micromamba installation (USE_MAMBA=0)."; \
+
+  52 | >>>     fi
+
+  53 |     
+
+--------------------
+
+failed to solve: process "/bin/sh -c set -eux;     echo \"USE_MAMBA=${USE_MAMBA}\";     if [ \"${USE_MAMBA}\" = \"1\" ]; then       echo \"MAMBA_ROOT_PREFIX=${MAMBA_ROOT_PREFIX}\";       curl --fail --location --show-error --retry 3 -o /usr/local/bin/micromamba         https://micro.mamba.pm/api/micromamba/linux-aarch64/latest;       chmod +x /usr/local/bin/micromamba;       file /usr/local/bin/micromamba | tee /tmp/mamba_file.txt;       if ! grep -qiE 'ELF.*aarch64|ELF.*ARM aarch64' /tmp/mamba_file.txt; then         echo 'ERROR: Downloaded micromamba is not an aarch64 ELF binary. Aborting.' >&2;         head -n 20 /usr/local/bin/micromamba || true;         exit 126;       fi;       /usr/local/bin/micromamba --version;       micromamba shell init -s bash -p ${MAMBA_ROOT_PREFIX};     else       echo \"Skipping micromamba installation (USE_MAMBA=0).\";     fi" did not complete successfully: exit code: 126
+
